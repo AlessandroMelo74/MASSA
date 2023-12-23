@@ -4,13 +4,14 @@ Cypress.on('window:before:load', windows => {
 describe('Nome (Pessoa Fisica', function() {
     const THREE_SECONDS_IN_ML = 3000
       beforeEach(function() {
-        cy.visit('https://confirme-frontend-dev.azurewebsites.net/auth/login')
+        cy.visit('https://confirme30-dev.confirmeonline.com.br/auth/login')
         })
        
       it('Nome (Pessoa Fisica)', function() {
         cy.login()          
         cy.get('.mat-mdc-select-placeholder').should('be.visible').click()
         cy.get('#mat-option-6 > .mdc-list-item__primary-text').should('be.visible').click()
+        cy.Sair()
         //cy.get('#mat-input-4').type('Marcelo Andre Antunes')
         //cy.get('.btn-section__search > .mdc-button__label').click()
         //cy.get('.default').should('be.visible').click()
