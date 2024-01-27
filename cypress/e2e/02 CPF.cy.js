@@ -4,7 +4,7 @@ Cypress.on('window:before:load', windows => {
 describe('CPF', function() {
     const THREE_SECONDS_IN_ML = 3000
       beforeEach(function() {
-        cy.visit('https://confirme30-dev.confirmeonline.com.br/auth/login')
+        cy.visit('https://confirme30-stg.confirmeonline.com.br/')
         })
        
       it('CPF', function() {
