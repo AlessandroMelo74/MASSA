@@ -2,13 +2,12 @@ Cypress.on('window:before:load', windows => {
 
 })
 describe('CNPJ', function() {
-    const THREE_SECONDS_IN_ML = 3000
-      beforeEach(function() {
-        cy.visit('https://confirme30-stg.confirmeonline.com.br/')
+        beforeEach(function() {
+        cy.login()
         })
        
       it('CNPJ', function() {
-        cy.login()       
+              
         cy.get('.mat-mdc-select-placeholder').should('be.visible').click()
         cy.get('#mat-option-2').should('be.visible').click()
         cy.get('#mat-input-4').type('82901000000127')

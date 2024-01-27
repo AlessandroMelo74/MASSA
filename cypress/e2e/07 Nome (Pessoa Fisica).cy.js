@@ -2,16 +2,60 @@ Cypress.on('window:before:load', windows => {
 
 })
 describe('Nome (Pessoa Fisica', function() {
-    const THREE_SECONDS_IN_ML = 3000
-      beforeEach(function() {
-        cy.visit('https://confirme30-stg.confirmeonline.com.br/')
+       beforeEach(function() {
+        cy.login()
         })
        
       it('Nome (Pessoa Fisica)', function() {
-        cy.login()          
-        cy.get('.mat-mdc-select-placeholder').should('be.visible').click()
-        cy.get('#mat-option-6 > .mdc-list-item__primary-text').should('be.visible').click()
+               
+        cy.get('.mat-mdc-select-placeholder').click()
+        cy.get('#mat-option-6 > .mdc-list-item__primary-text').click()
+        cy.get('#mat-input-4').type('EDSON DE SOUZA FERREIRA')
+        cy.get('#mat-mdc-form-field-label-12 > .ng-tns-c67-9').type('07/01/1952')
+        cy.get('.btn-section__search > .mdc-button__label').click()
         cy.Sair()
+
+        cy.login()      
+        cy.get('.mat-mdc-select-placeholder').click()
+        cy.get('#mat-option-6 > .mdc-list-item__primary-text').click()
+        cy.get('#mat-input-4').type('EDUARDO GOMES SARDINHA')
+        cy.get('#mat-mdc-form-field-label-12 > .ng-tns-c67-9').type('15/12/1981')
+        cy.get('.btn-section__search > .mdc-button__label').click()
+        cy.Sair()
+
+        cy.login()      
+        cy.get('.mat-mdc-select-placeholder').click()
+        cy.get('#mat-option-6 > .mdc-list-item__primary-text').click()
+        cy.get('#mat-input-4').type('YSMYLOWSSOWVYKC DA SILVA SANTOS')
+        cy.get('#mat-mdc-form-field-label-12 > .ng-tns-c67-9').type('22/01/2003')
+        cy.get('.btn-section__search > .mdc-button__label').click()
+        cy.Sair()
+
+        cy.login()      
+        cy.get('.mat-mdc-select-placeholder').click()
+        cy.get('#mat-option-6 > .mdc-list-item__primary-text').click()
+        cy.get('#mat-input-4').type('MARIA MADALENA TEODORO MOTA')
+        cy.get('#mat-mdc-form-field-label-12 > .ng-tns-c67-9').type('18/04/1980')
+        cy.get('.btn-section__search > .mdc-button__label').click()
+        cy.Sair()
+
+        cy.login()      
+        cy.get('.mat-mdc-select-placeholder').click()
+        cy.get('#mat-option-6 > .mdc-list-item__primary-text').click()
+        cy.get('#mat-input-4').type('VINICIUS CONCEICAO MACHADO')
+        cy.get('#mat-mdc-form-field-label-12 > .ng-tns-c67-9').type('29/12/1974')
+        cy.get('.btn-section__search > .mdc-button__label').click()
+        cy.Sair()
+
+        cy.login()      
+        cy.get('.mat-mdc-select-placeholder').click()
+        cy.get('#mat-option-6 > .mdc-list-item__primary-text').click()
+        cy.get('#mat-input-4').type('ANDERSON DOS SANTOS AMORIM')
+        cy.get('#mat-mdc-form-field-label-12 > .ng-tns-c67-9').type('29/09/1981')
+        cy.get('.btn-section__search > .mdc-button__label').click()
+        cy.Sair()
+
+
         //cy.get('#mat-input-4').type('Marcelo Andre Antunes')
         //cy.get('.btn-section__search > .mdc-button__label').click()
         //cy.get('.default').should('be.visible').click()
@@ -74,4 +118,5 @@ describe('Nome (Pessoa Fisica', function() {
         cy.get('.mat-mdc-menu-item').should('be.visible').click()
       */})
 
-})
+  })
+
